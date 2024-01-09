@@ -6,8 +6,12 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 import background from "../../images/background.jpg";
 import StatusRow from "../StatusRow";
 import LoseGame from '../LoseGame';
+import packageJson from '../../../package.json';
 
 import Color from "color";
+
+const appVersion = packageJson.version;
+
 
 const Game = styled.div`
 	width: 100vw;
@@ -306,30 +310,39 @@ const Stage = ({ lose, restartClick, map, player, hint, status, paused, ...other
 						<StatusRow
 							backgroundColor={theme3d ? "#444" : "black"}
 							portrait={portrait}
-							borderSize={pixelSize / 10}
-							margin={pixelSize / 3}
-							padding={pixelSize / 2}
+							borderSize={pixelSize / 20}
+							margin={pixelSize / 10}
+							padding={pixelSize / 10}
 							title="SCORE"
 							value={status.score}
 						/>
 						<StatusRow
 							backgroundColor={theme3d ? "#444" : "black"}
 							portrait={portrait}
-							borderSize={pixelSize / 10}
-							margin={pixelSize / 3}
-							padding={pixelSize / 2}
+							borderSize={pixelSize / 20}
+							margin={pixelSize / 10}
+							padding={pixelSize / 10}
 							title="LEVEL"
 							value={status.level}
 						/>
 						<StatusRow
 							backgroundColor={theme3d ? "#444" : "black"}
 							portrait={portrait}
-							borderSize={pixelSize / 10}
-							margin={pixelSize / 3}
-							padding={pixelSize / 2}
+							borderSize={pixelSize / 20}
+							margin={pixelSize / 10}
+							padding={pixelSize / 10}
 							title="LINES"
 							value={status.lines}
 						/>
+						<StatusRow
+							backgroundColor={theme3d ? "#444" : "black"}
+							portrait={portrait}
+							borderSize={pixelSize / 20}
+							margin={pixelSize / 10}
+							padding={pixelSize / 10}
+							title="VER."
+							value={appVersion}
+						/>						
 					</ContainerStatus>
 				)}
 			</Game>
