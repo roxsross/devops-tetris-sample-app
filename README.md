@@ -2,8 +2,6 @@
 
 > Owner: Marcelo [repository](https://github.com/mpirescarvalho/react-tetris)
 
-Claro, aquí tienes un detalle más específico del desafío DevOps:
-
 **Desafío DevOps: Implementación de Tetris ReactJS**
 
 1. **Contenedorización:**
